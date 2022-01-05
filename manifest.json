@@ -1,0 +1,18 @@
+{
+    "name": "Dislike Hacker",
+    "description": "Show Dislike Amount in YouTube Videos",
+    "version": "1.0",
+    "icons": { "16": "icon.png","32": "icon.png","128": "icon.png"},
+    "manifest_version": 2,
+    "permissions": [
+        "https://www.youtube.com/"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "https://www.youtube.com/*"
+        ],
+        "js": [
+            "contentscript.js"
+        ]
+    }]
+}
