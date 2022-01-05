@@ -1,5 +1,6 @@
 var element = ''
 
+function find(){
 setTimeout(function() {
     for (const a of document.querySelectorAll("yt-formatted-string")) {
         if (a.textContent=="Dislike") {
@@ -8,7 +9,9 @@ setTimeout(function() {
         }
     }
 }, 1000)
+}
 
+find()
 async function start() {
 
     setTimeout(function() {
@@ -30,7 +33,7 @@ new MutationObserver(() => {
     const url = location.href;
     if (url !== lastUrl) {
         lastUrl = url;
-        start();
+        element.innerText='Dislike';find();start();
     }
 }).observe(document, { subtree: true, childList: true });
 
